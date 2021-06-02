@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	*{box-sizing: border-box;}
+	input[type=text], selector{
+		width: 100%;
+		padding: 12px;
+		border: 1px solid #ccc;
+		border-radius: 4px;
+		resize: vertical;
+	}
+	label{
+		padding: 12px 12px 12px 0;
+		display: inline-block;
+	}
+	
+	input[type=submit]{
+		background-color: skyblue;
+		color: white;
+		padding: 12px 20px;
+		border: none;
+		border-radius: 4px;
+		float: right;
+	}
+	
+	.container{
+		border-radius: 5px;
+		background-color: lightgray;
+		padding: 20px;
+	}
+	.col_1{
+		float: left;
+		width: 20%;
+		margin-top: 6px;
+	}
+	.col_2{
+		float: left;
+		width: 80%;
+		margin-top: 6px;
+	}
+	.row:after{
+		content: "";
+		display: table;
+		clear: both;
+	}
+	
+	input[type=radio]:checked + label, input[type=checkbox]:checked + label{
+		font-size: 1.5em;
+	}
+	input:focus{
+		background-color: yellow;
+	}
+	
+</style>
+</head>
+<body>
+	<div class="container">
+	<form action="">
+		<div class="row">
+			<div class="col_1">
+				<!-- label의 for 속성과 input type id와 연계 : 같은 값을 가지고 있어야 된다.
+					 label을 클릭하면 자동으로 input에 커서가 생성된다. -->
+				<label for="fname">First Name</label>
+			</div>
+			<div class="col_2">
+				<input type="text" id="fname" name="firstname" placeholder="이름을 입력하세요.">
+			</div>
+		<div class="row">
+			<div class="col_1">
+				<label for="lname">Last Name</label>
+			</div>
+			<div class="col_2">
+				<input type="text" id="lname" name="lastname" placeholder="성씨를 입력하세요.">
+		</div>
+		<div class="row">
+			<div class="col_1">
+				<label>Gender</label>
+			</div>
+			<div class="col_2">
+				<input type="radio" name="gender" value="남"><label>남자</label>
+				<input type="radio" name="gender" value="여"><label>여자</label>
+				</div>
+		<div class="row">
+			<div class="col_1">
+				<label>Hobby</label>
+			</div>
+			<div class="col_2">
+				<input type="checkbox" name="hobby" value="운동"><label>운동</label>
+				<input type="checkbox" name="hobby" value="게임"><label>게임</label>
+				<input type="checkbox" name="hobby" value="독서"><label>독서</label>
+				<input type="checkbox" name="hobby" value="영화"><label>영화</label>
+				</div>
+				<div class="row">
+					<div class="col_1">
+					<label for="country">"Country"</label>
+				</div>
+				<div class="col_2">
+				<select id="country" name="country"></select>
+				</div>
+		<div class="row">
+			<input type="submit" value="submit">
+		</div>
+		</div>
+	</form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
